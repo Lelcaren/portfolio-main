@@ -3,108 +3,114 @@ import PropTypes from 'prop-types';
 
 // Sample project data with local image paths
 const projectsData = [
+{
+  id: 1,
+  title: "Hotel Booking Website",
+  image: "/azure.png",
+  description: "A modern, responsive hotel booking website built with TypeScript and React. The platform allows users to browse available rooms, make reservations, and manage their bookings. It includes an admin dashboard for managing room availability, pricing, and bookings.",
+  skills: ["TypeScript", "React", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "JWT"],
+  liveUrl: "https://azurey.netlify.app/",
+  githubUrl: "https://github.com/Lelcaren/azure",
+  keyFeatures: [
+    "Room listings with filters for price, availability, and amenities",
+    "Secure user authentication and profile management",
+    "Booking system with real-time availability",
+    "Payment processing integration (e.g., Stripe or PayPal)",
+    "Admin dashboard for room, booking, and user management",
+    "Responsive design for mobile and desktop devices"
+  ]
+},
+
+{
+  id: 2,
+  title: "VA & Study Abroad Platform",
+  image: "/belly.png",
+  description: "A professional platform designed to connect clients with skilled virtual assistants and provide comprehensive support for individuals seeking study abroad opportunities. Built with React and Firebase for a secure and seamless user experience.",
+  skills: ["React", "Firebase", "Socket.io", "CSS3", "JavaScript", "Material-UI"],
+  liveUrl: "https://belyote.netlify.app/",
+  githubUrl: "https://github.com/Lelcaren/Belyotte",
+  keyFeatures: [
+    "Browse and hire experienced virtual assistants",
+    "Dedicated job board for VAs and clients",
+    "Study abroad application guidance and resources",
+    "Secure user authentication and profile management",
+    "Real-time communication features",
+    "Responsive design for all devices"
+  ]
+},
+
   {
-    id: 1,
-    title: "E-commerce Platform",
-    image: "/div74@2x.png",
-    description: "A full-stack e-commerce platform built with modern web technologies. Features include user authentication, product catalog, shopping cart, payment integration, and admin dashboard.",
-    skills: ["React", "Node.js", "MongoDB", "Stripe API", "JWT", "Express.js"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/username/ecommerce",
-    keyFeatures: [
-      "User authentication and authorization",
-      "Product catalog with search and filtering",
-      "Shopping cart and checkout process",
-      "Payment integration with Stripe",
-      "Admin dashboard for inventory management",
-      "Order tracking and management"
-    ]
-  },
+  id: 3,
+  title: "Property Listing Platform",
+  image: "/dhouse.png",
+  description: "A user-friendly, responsive web platform for listing and discovering real estate properties. Designed for both property sellers and buyers, the website features advanced filtering, property details, and user management. Built with TypeScript, React, and Next.js for high performance and scalability.",
+  skills: ["React", "Tailwind CSS", "Framer Motion", "Next.js", "TypeScript"],
+  liveUrl: "https://dehouses.netlify.app/",
+  githubUrl: "https://github.com/Lelcaren/dhouse",
+  keyFeatures: [
+    "Property listings with images and detailed descriptions",
+    "Search and filtering by location, price, and type",
+    "User authentication and profile management",
+    "Property submission and management dashboard",
+    "SEO optimization for wider property reach",
+    "Responsive design for mobile and desktop users"
+  ]
+},
+
   {
-    id: 2,
-    title: "Social Media App",
-    image: "/div81@2x.png",
-    description: "A responsive social media application with real-time messaging, post sharing, and user interactions. Built with React and Firebase for seamless user experience.",
-    skills: ["React", "Firebase", "Socket.io", "CSS3", "JavaScript", "Material-UI"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/username/social-app",
-    keyFeatures: [
-      "Real-time messaging and notifications",
-      "Post sharing with image upload",
-      "User profiles and connections",
-      "Like, comment, and share functionality",
-      "Responsive design for all devices",
-      "Firebase authentication"
-    ]
-  },
-  {
-    id: 3,
-    title: "Portfolio Website",
-    image: "/div88@2x.png",
-    description: "A modern, responsive portfolio website showcasing my work and skills. Features smooth animations, dark mode toggle, and optimized performance.",
-    skills: ["React", "Tailwind CSS", "Framer Motion", "Next.js", "TypeScript"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/username/portfolio",
-    keyFeatures: [
-      "Smooth animations and transitions",
-      "Dark/light mode toggle",
-      "Responsive design",
-      "SEO optimized",
-      "Fast loading times",
-      "Contact form integration"
-    ]
-  },
-  {
-    id: 4,
-    title: "Task Management",
-    image: "/div95@2x.png",
-    description: "A comprehensive task management application with drag-and-drop functionality, team collaboration features, and progress tracking.",
-    skills: ["Vue.js", "Vuex", "Node.js", "PostgreSQL", "Express.js", "Socket.io"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/username/task-manager",
-    keyFeatures: [
-      "Drag-and-drop task organization",
-      "Team collaboration tools",
-      "Progress tracking and analytics",
-      "Real-time updates",
-      "File attachments",
-      "Deadline notifications"
-    ]
-  },
-  {
-    id: 5,
-    title: "Weather Dashboard",
-    image: "/div102@2x.png",
-    description: "An interactive weather dashboard providing real-time weather data, forecasts, and location-based weather information with beautiful data visualizations.",
-    skills: ["JavaScript", "Chart.js", "Weather API", "CSS3", "HTML5", "Local Storage"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/username/weather-dashboard",
-    keyFeatures: [
-      "Real-time weather data",
-      "5-day weather forecast",
-      "Location-based weather",
-      "Interactive charts and graphs",
-      "Weather alerts and notifications",
-      "Favorite locations"
-    ]
-  },
-  {
-    id: 6,
-    title: "Chat Application",
-    image: "/div109@2x.png",
-    description: "A real-time chat application supporting multiple rooms, file sharing, and emoji reactions. Built with Socket.io for instant messaging capabilities.",
-    skills: ["React", "Socket.io", "Node.js", "MongoDB", "Express.js", "JWT"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/username/chat-app",
-    keyFeatures: [
-      "Real-time messaging",
-      "Multiple chat rooms",
-      "File sharing capabilities",
-      "Emoji reactions",
-      "User presence indicators",
-      "Message history"
-    ]
-  }
+  id: 4,
+  title: "Nutrition Consultation Website",
+  image: "/karima.png",
+  description: "A sleek and informative website for a nutrition consultant offering personalized dietary advice, wellness plans, and virtual consultations. Built for client engagement and educational content delivery with a focus on simplicity and accessibility.",
+  skills: ["Vue.js", "Vuex", "Node.js", "PostgreSQL", "Express.js", "Socket.io"],
+  liveUrl: "https://wek.netlify.app/",
+  githubUrl: "https://github.com/Lelcaren/Wellness",
+  keyFeatures: [
+    "Client onboarding and profile creation",
+    "Booking system for consultation sessions",
+    "Educational blog on nutrition and wellness",
+    "Customized meal plans and health tips",
+    "Contact form and real-time chat support",
+    "Responsive design for all devices"
+  ]
+},
+
+ {
+  id: 5,
+  title: "Rental Billing System",
+  image: "/roysa.png",
+  description: "A full-stack rental billing system designed for Kenyan landlords to manage properties, tenants, and billing efficiently. The platform offers automated rent calculations, M-Pesa integration, and real-time payment tracking with a user-friendly dashboard.",
+  skills: ["JavaScript", "Node.js", "Express.js", "MongoDB", "React", "M-Pesa API", "Chart.js"],
+  liveUrl: "https://mwangazay.netlify.app/",
+  githubUrl: "https://github.com/Lelcaren/mwangaza-rentals",
+  keyFeatures: [
+    "Multi-property and tenant management",
+    "Automated rent billing and receipts",
+    "M-Pesa payment integration",
+    "Real-time payment tracking and history",
+    "Visual dashboards with charts and summaries",
+    "Responsive design for mobile and desktop access"
+  ]
+},
+
+ {
+  id: 6,
+  title: "Virtual Assistant Client Platform",
+  image: "/Virtual.png",
+  description: "A responsive web platform developed for a company to help clients find and hire skilled virtual assistants. The system includes client onboarding, VA listings, messaging features, and a streamlined matching process.",
+  skills: ["React", "Socket.io", "Node.js", "MongoDB", "Express.js", "JWT"],
+  liveUrl: "https://virtualstaffing.netlify.app/",
+  githubUrl: "https://github.com/Lelcaren/virtualstaffing",
+  keyFeatures: [
+    "Client onboarding and account creation",
+    "Virtual assistant profiles with skills and experience",
+    "Real-time messaging between clients and VAs",
+    "Search and filtering for assistant roles",
+    "Application tracking and management dashboard",
+    "Responsive and user-friendly design"
+  ]
+}
+
 ];
 
 const ProjectCard = ({ project }) => {

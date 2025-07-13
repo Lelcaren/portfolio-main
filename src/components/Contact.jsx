@@ -3,50 +3,49 @@ import { useState } from "react";
 
 const Contact = ({ className = "" }) => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
-  
+
   const [errors, setErrors] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
-    
-    // Clear error when user starts typing
+
     if (errors[name]) {
-      setErrors(prev => ({
+      setErrors((prev) => ({
         ...prev,
-        [name]: ''
+        [name]: "",
       }));
     }
   };
 
   const validateForm = () => {
     const newErrors = {};
-    
+
     if (!formData.name.trim()) {
-      newErrors.name = 'Please enter your name';
+      newErrors.name = "Please enter your name";
     }
-    
+
     if (!formData.email.trim()) {
-      newErrors.email = 'Please enter a valid email';
+      newErrors.email = "Please enter a valid email";
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email';
+      newErrors.email = "Please enter a valid email";
     }
-    
+
     if (!formData.message.trim()) {
-      newErrors.message = 'Please enter your message';
+      newErrors.message = "Please enter your message";
     }
-    
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -54,8 +53,8 @@ const Contact = ({ className = "" }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      console.log('Form submitted:', formData);
-      // Handle form submission here
+      console.log("Form submitted:", formData);
+      // Handle form submission logic here
     }
   };
 
@@ -86,7 +85,7 @@ const Contact = ({ className = "" }) => {
                   Let's work together
                 </h3>
               </div>
-              
+
               <div className="pb-8">
                 <div className="text-base sm:text-lg leading-6 sm:leading-[29.3px] text-[#d1d5db]">
                   I'm always interested in new opportunities and exciting
@@ -104,9 +103,9 @@ const Contact = ({ className = "" }) => {
                     alt="Email"
                     src="/div214.svg"
                   />
-                  <span className="leading-6">sohail.ochi@example.com</span>
+                  <span className="leading-6">lelcaren11@gmail.com</span>
                 </div>
-                
+
                 <div className="flex items-center">
                   <img
                     className="h-6 w-5 sm:h-7 sm:w-5 mr-4"
@@ -114,9 +113,9 @@ const Contact = ({ className = "" }) => {
                     alt="Phone"
                     src="/div220.svg"
                   />
-                  <span className="leading-6">+1 (555) 123-4567</span>
+                  <span className="leading-6">+2545401076</span>
                 </div>
-                
+
                 <div className="flex items-center">
                   <img
                     className="h-6 w-4 sm:h-7 sm:w-[15px] mr-4"
@@ -124,7 +123,7 @@ const Contact = ({ className = "" }) => {
                     alt="Location"
                     src="/div226.svg"
                   />
-                  <span className="leading-6">San Francisco, CA</span>
+                  <span className="leading-6">Nairobi, Kenya</span>
                 </div>
               </div>
 
@@ -142,30 +141,21 @@ const Contact = ({ className = "" }) => {
                   alt="Twitter"
                   src="/marginwrap.svg"
                 />
-                <img
-                  className="h-7 w-8 sm:h-8 sm:w-10 cursor-pointer hover:opacity-80 transition-opacity"
-                  loading="lazy"
-                  alt="GitHub"
-                  src="/marginwrap-2.svg"
-                />
               </div>
             </div>
 
             {/* Contact Form */}
             <div className="flex flex-col items-start justify-start order-1 lg:order-2">
               <form onSubmit={handleSubmit} className="w-full space-y-6">
-                {/* Name Field */}
                 <div className="w-full">
-                  <div className="relative">
-                    <input
-                      type="text"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      className="w-full h-12 sm:h-[54px] rounded-lg bg-[#1f2937] border border-[#374151] px-4 py-3 text-base sm:text-lg font-medium text-white placeholder-[#9ca3af] focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:border-transparent transition-all"
-                      placeholder="Your Name"
-                    />
-                  </div>
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    className="w-full h-12 sm:h-[54px] rounded-lg bg-[#1f2937] border border-[#374151] px-4 py-3 text-base sm:text-lg font-medium text-white placeholder-[#9ca3af] focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:border-transparent transition-all"
+                    placeholder="Your Name"
+                  />
                   {errors.name && (
                     <div className="mt-1 text-sm text-[#ff4d4f]">
                       {errors.name}
@@ -173,18 +163,15 @@ const Contact = ({ className = "" }) => {
                   )}
                 </div>
 
-                {/* Email Field */}
                 <div className="w-full">
-                  <div className="relative">
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      className="w-full h-12 sm:h-[54px] rounded-lg bg-[#1f2937] border border-[#374151] px-4 py-3 text-base sm:text-lg font-medium text-white placeholder-[#9ca3af] focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:border-transparent transition-all"
-                      placeholder="Your Email"
-                    />
-                  </div>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    className="w-full h-12 sm:h-[54px] rounded-lg bg-[#1f2937] border border-[#374151] px-4 py-3 text-base sm:text-lg font-medium text-white placeholder-[#9ca3af] focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:border-transparent transition-all"
+                    placeholder="Your Email"
+                  />
                   {errors.email && (
                     <div className="mt-1 text-sm text-[#ff4d4f]">
                       {errors.email}
@@ -192,18 +179,15 @@ const Contact = ({ className = "" }) => {
                   )}
                 </div>
 
-                {/* Message Field */}
                 <div className="w-full">
-                  <div className="relative">
-                    <textarea
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      rows={6}
-                      className="w-full rounded-lg bg-[#1f2937] border border-[#374151] px-4 py-3 text-base sm:text-lg font-medium text-white placeholder-[#9ca3af] focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:border-transparent transition-all resize-vertical min-h-[120px]"
-                      placeholder="Your Message"
-                    />
-                  </div>
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    rows={6}
+                    className="w-full rounded-lg bg-[#1f2937] border border-[#374151] px-4 py-3 text-base sm:text-lg font-medium text-white placeholder-[#9ca3af] focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:border-transparent transition-all resize-vertical min-h-[120px]"
+                    placeholder="Your Message"
+                  />
                   {errors.message && (
                     <div className="mt-1 text-sm text-[#ff4d4f]">
                       {errors.message}
@@ -211,7 +195,6 @@ const Contact = ({ className = "" }) => {
                   )}
                 </div>
 
-                {/* Submit Button */}
                 <button
                   type="submit"
                   className="w-full h-12 sm:h-10 bg-[#22d3ee] hover:bg-[#0891b2] text-black font-medium text-base sm:text-lg rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900"
@@ -232,3 +215,4 @@ Contact.propTypes = {
 };
 
 export default Contact;
+
